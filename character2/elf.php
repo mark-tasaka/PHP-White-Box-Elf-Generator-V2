@@ -22,6 +22,7 @@
     <!--PHP-->
     <?php
     
+    include 'php/armour.php';
     include 'php/checks.php';
     include 'php/weapons.php';
     include 'php/gear.php';
@@ -113,13 +114,13 @@
     
         }
     
-
+/*
         if(isset($_POST["theCharacterRace"]))
         {
             $characterRace = $_POST["theCharacterRace"];
-        }
+        }*/
 
-        //$characterRace = "Human";
+        $characterRace = "Elf";
     
             
         if(isset($_POST["theAlignment"]))
@@ -185,7 +186,7 @@
         $languages = addLanguages($intelligence);
     
 
-    /*
+
         if(isset($_POST["theArmour"]))
         {
             $armour = $_POST["theArmour"];
@@ -204,7 +205,7 @@
         
        $descendingAc = 9 - $armourDefense - $dexterityMod;
        $ascendingAc = 10 + $armourDefense + $dexterityMod;
-    */
+
 
     
     $descendingAc = 9 - $dexterityMod;
@@ -328,7 +329,7 @@
     
     $totalGearWeight = 10;
     
-    $totalWeaponArmourWeight = $totalWeaponWeight; 
+    $totalWeaponArmourWeight = $totalArmourWeight + $totalWeaponWeight; 
     
     
     $totalWeightCarried = $totalWeaponArmourWeight + $totalGearWeight + $coinWeight;
@@ -715,6 +716,15 @@
                 echo $alignment;
            ?>
         </span>
+
+        
+              
+       <span id="armourName">
+           <?php
+                echo $armourName;
+           ?>
+        </span>
+       
        
        <span id="exBonus">
            <?php
@@ -728,6 +738,14 @@
                 echo "Weapon weight: " . $totalWeaponWeight . " lb.";
             ?>
        </span>
+
+                     
+       <span id="totalArmourWeight">
+            <?php
+                echo "Armour weight: " . $totalArmourWeight . " lb.";
+            ?>
+       </span>
+       
 
 
        <span id="weaponsList">
