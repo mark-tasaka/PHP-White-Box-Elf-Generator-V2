@@ -32,14 +32,35 @@
 
 
     
-function getRandomWeapons()
-{
-    $weaponsArray = array(3, 9);
-
-    return $weaponsArray;
-}
-
-
+    
+    function getRandomWeapons()
+    {
+        $weaponsArray = array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
+    
+    
+        //shuffle $weaponsArray
+        shuffle($weaponsArray); 
+    
+        $numberOfWeapons = rand (2, 6);
+    
+        $weaponsHas = array();
+    
+        for($j = 0; $j < $numberOfWeapons; ++$j)
+        {
+            $weapon = $weaponsArray[$j];
+            
+            array_push($weaponsHas, $weapon);
+            
+        }
+    
+        $rangedWeapon = rand(14, 18);
+    
+        array_push($weaponsHas, $rangedWeapon);
+    
+        return $weaponsHas;
+    }
+    
+    
 
 function isWeaponTwoHanded($input, $value)
 {

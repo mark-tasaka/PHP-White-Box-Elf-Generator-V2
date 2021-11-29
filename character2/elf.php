@@ -278,7 +278,6 @@
     
             $weaponCount = count($weaponArray);
     
-    /*
             for($i = 0; $i < $weaponCount; ++$i)
             {
     
@@ -297,7 +296,7 @@
                     array_push($gearArray, 36);
                 }
     
-            }*/
+            }
     
         }
         else
@@ -334,7 +333,11 @@
     
     $totalWeightCarried = $totalWeaponArmourWeight + $totalGearWeight + $coinWeight;
     
-    $saveMatrix = savingThrowMatrix ($level);
+    //$saveMatrix = savingThrowMatrix ($level);
+    
+    $saveMatrixFighter = savingThrowMatrixFighter ($level);
+    $saveMatrixMagicUser = savingThrowMatrixMagicUser ($level);
+
 
     
    $characterRaceTraits = demiHumanTraits ($characterRace);
@@ -649,18 +652,32 @@
            {
                echo ""; 
            }
-           else
+           else if($saveThrowOption == 2)
            {
-               echo $saveMatrix[0];
+               echo $saveMatrixFighter[0];
                echo "<br/>";
-               echo $saveMatrix[1] - $dwarfSaveMagic;
+               echo $saveMatrixFighter[1] - $dwarfSaveMagic;
                echo "<br/>";
-               echo $saveMatrix[2];
+               echo $saveMatrixFighter[2];
                echo "<br/>";
-               echo $saveMatrix[3];
+               echo $saveMatrixFighter[3];
                echo "<br/>";
-               echo $saveMatrix[4] - $dwarfSaveMagic;
+               echo $saveMatrixFighter[4] - $dwarfSaveMagic;
            }
+           else if($saveThrowOption == 3)
+           {
+               echo $saveMatrixMagicUser[0];
+               echo "<br/>";
+               echo $saveMatrixMagicUser[1] - $dwarfSaveMagic;
+               echo "<br/>";
+               echo $saveMatrixMagicUser[2];
+               echo "<br/>";
+               echo $saveMatrixMagicUser[3];
+               echo "<br/>";
+               echo $saveMatrixMagicUser[4] - $dwarfSaveMagic;
+           }
+           
+           
            
            ?>
        </span>

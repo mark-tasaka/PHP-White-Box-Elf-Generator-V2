@@ -1,6 +1,6 @@
 <?php
 
-/*Magic-User*/
+/*Fighter*/
 
 function experienceNextLevel ($level)
 {
@@ -9,42 +9,34 @@ function experienceNextLevel ($level)
     switch($level)
     {
         case 1:
-            $xp = "2,500";
-            break;
-            
-        case 2:
             $xp = "5,000";
             break;
             
-        case 3:
+        case 2:
             $xp = "10,000";
             break;
             
-        case 4:
+        case 3:
             $xp = "20,000";
             break;
             
-        case 5:
+        case 4:
             $xp = "40,000";
             break;
             
-        case 6:
+        case 5:
             $xp = "80,000";
             break;
             
-        case 7:
+        case 6:
             $xp = "160,000";
             break;
             
-        case 8:
+        case 7:
             $xp = "320,000";
             break;
             
-        case 9:
-            $xp = "640,000";
-            break;
-            
-        case 10:
+        case 8:
             $xp = "---";
             break;
                   
@@ -56,6 +48,15 @@ function experienceNextLevel ($level)
     return $xp;
 }
 
+/*
+function savingThrowOption ($option)
+{
+    if(option == 1)
+    {
+        return 
+    }
+}*/
+
 
 function singleSave ($level)
 {
@@ -65,51 +66,43 @@ function singleSave ($level)
     switch($level)
     {
         case 1:
-            $save = 15;
-            break;
-            
-        case 2:
             $save = 14;
             break;
             
-        case 3:
+        case 2:
             $save = 13;
             break;
             
-        case 4:
+        case 3:
             $save = 12;
             break;
             
-        case 5:
+        case 4:
             $save = 11;
             break;
             
-        case 6:
+        case 5:
             $save = 10;
             break;
             
-        case 7:
+        case 6:
             $save = 9;
             break;
             
-        case 8:
+        case 7:
             $save = 8;
             break;
             
-        case 9:
+        case 8:
             $save = 7;
             break;
             
-        case 10:
+        case 9:
             $save = 6;
             break;
             
-        case 11:
+        case 10:
             $save = 5;
-            break;
-            
-        case 12:
-            $save = 4;
             break;
                   
         default:
@@ -125,7 +118,41 @@ function singleSave ($level)
 2=paraluze
 3=breath
 4=spells*/
-function savingThrowMatrix ($level)
+function savingThrowMatrixFighter ($level)
+{
+    $savingThrows = array(12, 13, 14, 15, 16);
+    
+    if($level ==3)
+    {
+        $savingThrows = array(10, 11, 12, 15, 14);
+    }
+    else if($level >=4 && $level <=5)
+    {
+        $savingThrows = array(10, 11, 12, 12, 14);
+    }
+    else if($level >=6 && $level <=7)
+    {
+        $savingThrows = array(8, 9, 10, 12, 12);
+    }
+    else if($level==8)
+    {
+        $savingThrows = array(8, 9, 10, 9, 12);
+    }
+    else if($level >=9)
+    {
+        $savingThrows = array(6, 7, 8, 9, 10);
+    }
+    
+    return $savingThrows;
+    
+}
+
+/*0=death
+1=wands
+2=paraluze
+3=breath
+4=spells*/
+function savingThrowMatrixMagicUser ($level)
 {
     $savingThrows = array(13, 14, 13, 16, 15);
     
