@@ -375,17 +375,10 @@
     $spellLevel1 = spellLevels($level)[0];
     $spellLevel2 = spellLevels($level)[1];
     $spellLevel3 = spellLevels($level)[2];
-    $spellLevel4 = spellLevels($level)[3];
-    $spellLevel5 = spellLevels($level)[4];
-    $spellLevel6 = spellLevels($level)[5];
-    
     
     $spellsForLevel1 = spellsEachLevel($level)[0];
     $spellsForLevel2 = spellsEachLevel($level)[1];
     $spellsForLevel3 = spellsEachLevel($level)[2];
-    $spellsForLevel4 = spellsEachLevel($level)[3];
-    $spellsForLevel5 = spellsEachLevel($level)[4];
-    $spellsForLevel6 = spellsEachLevel($level)[5];
     
     /*
     $spellLevelTitle = spellHeader1 ($level);
@@ -925,26 +918,6 @@
            ?>
        </span>       
        
-       <span id="spellsLevel4">
-           <?php
-           echo $spellLevel4;
-           ?>
-       </span>       
-       
-       <span id="spellsLevel5">
-           <?php
-           echo $spellLevel5;
-           ?>
-       </span>       
-
-       <span id="spellsLevel6">
-           <?php
-           echo $spellLevel6;
-           ?>
-       </span>       
-       
-       
-       
        
        <span id="spellsForLevel1">
        <?php
@@ -964,29 +937,12 @@
            ?>
        </span>
        
-       <span id="spellsForLevel4">
-       <?php
-           echo $spellsForLevel4;
-           ?>
-       </span>
-       
-       <span id="spellsForLevel5">
-       <?php
-           echo $spellsForLevel5;
-           ?>
-       </span>
-       
-       <span id="spellsForLevel6">
-       <?php
-           echo $spellsForLevel6;
-           ?>
-       </span>
-
+ 
      
        <span id="spellLine">
        
        <?php
-           echo "________________________________________";
+           echo "________________________";
            ?>
        </span>
        
