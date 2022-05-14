@@ -207,9 +207,10 @@
        $ascendingAc = 10 + $armourDefense + $dexterityMod;
 
 
-    
+    /*
     $descendingAc = 9 - $dexterityMod;
     $ascendingAc = 10 + $dexterityMod;
+    */
     
         if(isset($_POST["theGold"]))
         {
@@ -878,7 +879,7 @@
        
        <span id="abilityScoreGeneration">
             <?php
-         //  echo $generationMessage;
+         // echo $generationMessage;
            ?>
        </span>
        
