@@ -11,6 +11,10 @@ https://www.oldschooladventures.org/whitebox/classes/elf/
 _____________________
 
 
+Update 1.04: 2022-05-14
+
+Corrected issue with the ACC/DCC values when armour is selected.
+
 
 Update 1.03: 2021-11-29
 
